@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 
 
 def login_request(request):
-    context = {}
+    context = {'title' : 'Dealership Review - Login'}
     # Handles POST request
     if request.method == "POST":
         # Get username and password from request.POST dictionary
@@ -47,7 +47,7 @@ def logout_request(request):
     return redirect('djangoapp:index')
 
 def registration_request(request):
-    context = {}
+    context = {'title' : 'Dealership Review - Registration'}
     # If it is a GET request, just render the registration page
     if request.method == 'GET':
         return render(request, 'djangoapp/user_registration.html', context)
@@ -79,17 +79,17 @@ def registration_request(request):
 
 # Update the `get_dealerships` view to render the index page with a list of dealerships
 def get_dealerships(request):
-    context = {}
+    context = {'title' : 'Dealership Review'}
     if request.method == "GET":
         return render(request, 'djangoapp/index.html', context)
 
 def about_us(request):
-    context = {}
+    context = {'title' : 'Dealership Review - About Us'}
     if request.method == "GET":
         return render(request, 'djangoapp/about.html', context)
 
 def contact(request):
-    context = {}
+    context = {'title' : 'Dealership Review - Contact'}
     if request.method == "GET":
         return render(request, 'djangoapp/contact.html', context)
 

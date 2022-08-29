@@ -1,0 +1,51 @@
+{% extends './base.html' %} {% block content %}
+
+<form action="{% url 'djangoapp:registration' %}" method="post">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <hr />
+    <div class="form-group">
+      <label class="form-check-label" for="username"><b>User Name</b></label>
+      <input class="form-control"
+        type="text"
+        placeholder="Enter User Name: "
+        name="username"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-check-label" for="firstname"><b>First Name</b></label>
+      <input class="form-control"
+        type="text"
+        placeholder="Enter First Name: "
+        name="firstname"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-check-label" for="lastname"><b>Last Name</b></label>
+      <input class="form-control"
+        type="text"
+        placeholder="Enter Last Name: "
+        name="lastname"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-check-label" for="password"><b>Password</b></label>
+      <input class="form-control"
+        type="password"
+        placeholder="Enter Password: "
+        name="password"
+        required
+      />
+    </div>
+
+    <div>
+      {% csrf_token %}
+      <button class="button btn btn-primary" type="submit">Sign Up</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}

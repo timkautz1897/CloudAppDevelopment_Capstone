@@ -17,17 +17,17 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="btn btn-link" style="color: white;" href="#">{{ user.first_name }}({{ user.username }})</a>
-                <a class="btn btn-link" style="color: white;" href="{% url 'admin:logout' %}">Logout</a>
+                <a class="btn btn-link" style="color: white;" href="{% url 'djangoapp:logout' %}">Logout</a>
             </li>
         </ul>
         {% else %}
-        <form class="form-inline" action="{% url 'admin:login' %}" method="post">
+        <form class="form-inline" action="{% url 'djangoapp:login' %}" method="post">
             {% csrf_token %}
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Username" name="username" >
                 <input type="password" class="form-control" placeholder="Password" name="password" >
                 <button class="btn btn-primary" type="submit">Login</button>
-                <!-- <a class="btn btn-link" href="">Sign Up</a> -->
+                <a class="btn btn-link" href="{% url 'djangoapp:registration' %}">Sign Up</a>
             </div>
         </form>
         {% endif %}

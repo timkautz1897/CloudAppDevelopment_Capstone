@@ -27,7 +27,7 @@ DEBUG = True
 
 APPEND_SLASH = True
 
-ALLOWED_HOSTS = ["localhost", '127.0.0.1']
+ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'tika-4a5-djangoapp.eu-de.mybluemix.net']
 
 
 # Application definition

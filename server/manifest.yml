@@ -1,11 +1,11 @@
   applications:
-  - name: djangoapp
+  - name: tika-4a5-djangoapp
     routes:
-      - route: $HOST.$DOMAIN
+      - route: tika-4a5-djangoapp.eu-de.mybluemix.net
     memory: 128M
     buildpack: python_buildpack
-  - name: djangoapp-nginx
+  - name: tika-4a5-djangoapp-nginx
     routes:
-      - route: $HOST.$DOMAIN/static
+      - route: tika-4a5-djangoapp.eu-de.mybluemix.net/static
     memory: 128M
     buildpack: staticfile_buildpack
